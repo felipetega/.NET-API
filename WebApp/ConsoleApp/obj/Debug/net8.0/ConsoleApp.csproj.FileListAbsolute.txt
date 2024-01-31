@@ -1,0 +1,15 @@
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.exe
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.deps.json
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.runtimeconfig.json
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.dll
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\bin\Debug\net8.0\ConsoleApp.pdb
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.AssemblyInfo.cs
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.sourcelink.json
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.dll
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\refint\ConsoleApp.dll
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.pdb
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ConsoleApp.genruntimeconfig.cache
+C:\dev\PROJETOS\.NET-API\WebApp\ConsoleApp\obj\Debug\net8.0\ref\ConsoleApp.dll
