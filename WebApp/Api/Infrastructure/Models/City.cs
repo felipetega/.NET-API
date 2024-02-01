@@ -1,4 +1,4 @@
-﻿namespace Api.Models
+﻿namespace Api.Infrastructure.Models
 {
     public class City
     {

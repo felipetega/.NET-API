@@ -1,136 +1,157 @@
-﻿using Api.Models;
-using Microsoft.AspNetCore.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Api.Infrastructure.Models;
+using Api.Infrastructure.Data;
 
 namespace Api.Controllers
 {
     public class CityController : Controller
     {
-        // GET: CityController
+        private readonly ApiContext _context;
 
-        private static List<City> cities = new List<City>
+        public CityController(ApiContext context)
         {
-            new City("CityA","SP")
-        };
-
-        // GET LIST
-        [HttpGet("api")]
-        public ActionResult<List<City>> Index()
-        {
-            return cities;
+            _context = context;
         }
 
-        // GET DETAIL
-        [HttpGet]
-        [Route("api/{id}")]
-        public ActionResult<City> Details(int id)
+        // GET: City
+        public async Task<IActionResult> Index()
         {
-            if (id >= 0 && id < cities.Count)
-            {
-                return cities[id];
-            }
-            else
+            return View(await _context.City.ToListAsync());
+        }
+
+        // GET: City/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
             {
                 return NotFound();
             }
+
+            var city = await _context.City
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (city == null)
+            {
+                return NotFound();
+            }
+
+            return View(city);
         }
 
-        // CREATE
-        [HttpPost("api/create")]
-        public ActionResult<City> Create([FromBody] City newCity)
+        // GET: City/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: City/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,CityName,StateName")] City city)
         {
             if (ModelState.IsValid)
             {
-                int newId = cities.Count;
-                newCity.Id = newId;
-
-                cities.Add(newCity);
-
-                return newCity;
+                _context.Add(city);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            else
-            {
-                return BadRequest(ModelState);
-            }
+            return View(city);
         }
 
-        // UPDATE
-        [HttpPut("api/update/{id}")]
-        public ActionResult<City> Edit(int id, [FromBody] City updatedCity)
+        // GET: City/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
-            if (id >= 0 && id < cities.Count)
+            if (id == null)
             {
-                City existingCity = cities[id];
+                return NotFound();
+            }
 
-                if (existingCity != null && ModelState.IsValid)
+            var city = await _context.City.FindAsync(id);
+            if (city == null)
+            {
+                return NotFound();
+            }
+            return View(city);
+        }
+
+        // POST: City/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CityName,StateName")] City city)
+        {
+            if (id != city.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
                 {
-                    if (!string.IsNullOrEmpty(updatedCity.CityName))
+                    _context.Update(city);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!CityExists(city.Id))
                     {
-                        existingCity.CityName = updatedCity.CityName;
-                        existingCity.StateName = updatedCity.StateName;
+                        return NotFound();
                     }
-
-
-                    return Ok(existingCity);
-                }
-                else
-                {
-                    return BadRequest(ModelState);
-                }
-            }
-            else
-            {
-                return NotFound();
-
-            }
-        }
-
-        // PATCH
-        [HttpPatch("api/patch/{id}")]
-        public ActionResult<City> EditName(int id, [FromBody] City updatedCity)
-        {
-            if (id >= 0 && id < cities.Count)
-            {
-                City existingCity = cities[id];
-
-                if (existingCity != null && ModelState.IsValid)
-                {
-                    if (!string.IsNullOrEmpty(updatedCity.CityName))
+                    else
                     {
-                        existingCity.CityName = updatedCity.CityName;
+                        throw;
                     }
-
-
-                    return Ok(existingCity);
                 }
-                else
-                {
-                    return BadRequest(ModelState);
-                }
+                return RedirectToAction(nameof(Index));
             }
-            else
-            {
-                return NotFound();
-
-            }
+            return View(city);
         }
 
-        // DELETE
-        [HttpDelete]
-        [Route("api/delete/{id}")]
-        public ActionResult<City> Delete(int id)
+        // GET: City/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
-            if (id >= 0 && id < cities.Count)
-            {
-                cities.RemoveAt(id);
-                return Ok($"Cidade id:{id} foi removido com sucesso!");
-            }
-            else
+            if (id == null)
             {
                 return NotFound();
             }
+
+            var city = await _context.City
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (city == null)
+            {
+                return NotFound();
+            }
+
+            return View(city);
         }
 
+        // POST: City/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var city = await _context.City.FindAsync(id);
+            if (city != null)
+            {
+                _context.City.Remove(city);
+            }
 
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool CityExists(int id)
+        {
+            return _context.City.Any(e => e.Id == id);
+        }
     }
 }
