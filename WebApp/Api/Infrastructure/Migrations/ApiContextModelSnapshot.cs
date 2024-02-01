@@ -21,7 +21,7 @@ namespace Api.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Api.Models.City", b =>
+            modelBuilder.Entity("Api.Infrastructure.Models.City", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Api.Infrastructure.Data;
+using Api.Infrastructure.Repositories;
+using Api.Infrastructure.Repositories.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApiContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ApiContext") ?? throw new InvalidOperationException("Connection string 'ApiContext' not found.")));
@@ -16,6 +18,8 @@ builder.Services.AddEntityFrameworkSqlServer()
     .AddDbContext<ApiContext>(
         options => options.UseSqlServer(builder.Configuration.GetConnectionString("ApiContext"))
     );
+
+    builder.Services.AddScoped<ICityRepository, CityRepository>();
 
 var app = builder.Build();
 

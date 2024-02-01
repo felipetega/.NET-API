@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dev\\Project\\.NET-API\\WebApp\\TestProject\\TestProject.csproj": {}
+    "C:\\dev\\PROJETOS\\.NET-API\\WebApp\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
-    "D:\\dev\\Project\\.NET-API\\WebApp\\TestProject\\TestProject.csproj": {
+    "C:\\dev\\PROJETOS\\.NET-API\\WebApp\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dev\\Project\\.NET-API\\WebApp\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "C:\\dev\\PROJETOS\\.NET-API\\WebApp\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "D:\\dev\\Project\\.NET-API\\WebApp\\TestProject\\TestProject.csproj",
-        "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-        "outputPath": "D:\\dev\\Project\\.NET-API\\WebApp\\TestProject\\obj\\",
+        "projectPath": "C:\\dev\\PROJETOS\\.NET-API\\WebApp\\TestProject\\TestProject.csproj",
+        "packagesPath": "C:\\Users\\felipe.ribeiro\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\PROJETOS\\.NET-API\\WebApp\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felipe.ribeiro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
