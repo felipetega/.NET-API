@@ -11,13 +11,13 @@ namespace ConsoleApp
         // Your City class properties and constructors go here
         // For example:
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string CityName { get; set; }
         public string StateName { get; set; }
 
         public City(int id, string name, string stateName)
         {
             Id = id;
-            Name = name;
+            CityName = name;
             StateName = stateName;
         }
 
@@ -25,7 +25,7 @@ namespace ConsoleApp
         {
             // Set default Id or generate a new Id as needed
             Id = 0;
-            Name = name;
+            CityName = name;
             StateName = stateName;
         }
     }

@@ -15,7 +15,7 @@ class Program
 
     static async Task ExecuteApiRequestAsync()
     {
-        ApiService apiService = new ApiService(); // Create an instance of the ApiService
+        ApiService apiService = new ApiService();
         string apiUrl = "https://localhost:7243/api";
         bool exitRequested = false;
 
@@ -82,7 +82,6 @@ class Program
         }
     }
 
-    // Helper method to get city details from the user
     static City GetCityDetails()
     {
         Console.WriteLine("Insira o nome para a cidade que deseja criar:");
@@ -94,7 +93,6 @@ class Program
         return new City(name, stateName);
     }
 
-    // Helper method to get city ID from the user
     static int GetCityId()
     {
         Console.WriteLine("Insira o ID da Cidade:");
