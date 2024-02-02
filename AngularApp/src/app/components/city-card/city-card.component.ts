@@ -1,24 +1,28 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Init } from 'v8';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-city-card',
-  standalone: true,
-  imports: [
-
-  ],
-  templateUrl: './city-card.component.html',
-  styleUrl: './city-card.component.css'
+    selector: 'app-city-card',
+    standalone: true,
+    imports: [
+        HttpClientModule
+    ],
+    templateUrl: './city-card.component.html',
+    styleUrl: './city-card.component.css'
 })
 export class CityCardComponent implements OnInit {
 
-  httpClient = inject(HttpClient)
+    httpClient = inject(HttpClient)
+    data: any = []
 
-  ngOnInit(): void {}
+    ngOnInit(): void {
+        this.fetchData()
+    }
 
-  fetchData(){
-    this.httpClient.get("")
-  }
-
+    fetchData(){
+        this.httpClient.get("/api").subscribe((data: any) => {
+            console.log(data);
+            this.data = data;
+        });
+    }
 }

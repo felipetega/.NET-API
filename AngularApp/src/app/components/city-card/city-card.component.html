@@ -1,4 +1,6 @@
-<div class="">
-    <p class="">City Name:</p>
-    <p class="">State Name:</p>
-</div>
+@for (item of data; track item.id) {
+    <div class="city-list-item">
+        <p class="city-name">City Name: {{item.cityName}}</p>
+        <p class="state-name">State Name: {{item.stateName}}</p>
+    </div>
+}
