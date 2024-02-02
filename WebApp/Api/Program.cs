@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Api.Infrastructure.Data;
-using Api.Infrastructure.Repositories;
-using Api.Infrastructure.Repositories.Interfaces;
+using Api.Services.Repositories;
+using Api.Services.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
