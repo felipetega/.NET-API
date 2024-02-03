@@ -1975,56 +1975,6 @@
           }
         }
       },
-      "Microsoft.Playwright/1.27.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
-          "System.ComponentModel.Annotations": "5.0.0",
-          "System.Text.Json": "6.0.5"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Playwright.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Playwright.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/Microsoft.Playwright.targets": {}
-        }
-      },
-      "Microsoft.Playwright.MSTest/1.27.1": {
-        "type": "package",
-        "dependencies": {
-          "MSTest.TestAdapter": "2.2.7",
-          "MSTest.TestFramework": "2.2.7",
-          "Microsoft.NET.Test.Sdk": "16.11.0",
-          "Microsoft.Playwright": "1.27.1",
-          "Microsoft.Playwright.TestAdapter": "1.27.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Playwright.MSTest.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Playwright.MSTest.dll": {}
-        }
-      },
-      "Microsoft.Playwright.TestAdapter/1.27.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Playwright": "1.27.1",
-          "Microsoft.TestPlatform.ObjectModel": "17.3.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.Playwright.TestAdapter.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Playwright.TestAdapter.dll": {}
-        }
-      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "type": "package",
         "compile": {
@@ -2473,70 +2423,6 @@
           "lib/net6.0/Moq.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "MSTest.TestAdapter/3.0.4": {
-        "type": "package",
-        "build": {
-          "build/net6.0/MSTest.TestAdapter.props": {},
-          "build/net6.0/MSTest.TestAdapter.targets": {}
-        }
-      },
-      "MSTest.TestFramework/3.0.4": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll": {
-            "related": ".xml"
-          }
-        },
-        "resource": {
-          "lib/net6.0/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "cs"
-          },
-          "lib/net6.0/de/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net6.0/es/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net6.0/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net6.0/it/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net6.0/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net6.0/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net6.0/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "pl"
-          },
-          "lib/net6.0/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net6.0/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net6.0/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net6.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net6.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        },
-        "build": {
-          "build/net6.0/MSTest.TestFramework.targets": {}
         }
       },
       "NETStandard.Library/1.6.1": {
@@ -3076,17 +2962,42 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.ComponentModel.Annotations/5.0.0": {
+      "System.ComponentModel/4.3.0": {
         "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
         "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.4/System.ComponentModel.Annotations.dll": {
             "related": ".xml"
           }
+        },
+        "runtime": {
+          "lib/netstandard1.4/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Composition/7.0.0": {
@@ -4594,6 +4505,107 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
+        }
+      },
+      "xunit/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "xunit.analyzers": "1.0.0",
+          "xunit.assert": "2.4.2",
+          "xunit.core": "[2.4.2]"
+        }
+      },
+      "xunit.abstractions/2.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/xunit.abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "xunit.analyzers/1.0.0": {
+        "type": "package"
+      },
+      "xunit.assert/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/xunit.assert.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.assert.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "xunit.core/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "xunit.extensibility.core": "[2.4.2]",
+          "xunit.extensibility.execution": "[2.4.2]"
+        },
+        "build": {
+          "build/xunit.core.props": {},
+          "build/xunit.core.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/xunit.core.props": {},
+          "buildMultiTargeting/xunit.core.targets": {}
+        }
+      },
+      "xunit.extensibility.core/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "xunit.abstractions": "2.0.3"
+        },
+        "compile": {
+          "lib/netstandard1.1/xunit.core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "xunit.extensibility.execution/2.4.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "xunit.extensibility.core": "[2.4.2]"
+        },
+        "compile": {
+          "lib/netstandard1.1/xunit.execution.dotnet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.1/xunit.execution.dotnet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "xunit.runner.visualstudio/2.4.5": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/_._": {}
+        },
+        "build": {
+          "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
       "Api/1.0.0": {
@@ -8042,337 +8054,6 @@
         "microsoft.openapi.nuspec"
       ]
     },
-    "Microsoft.Playwright/1.27.1": {
-      "sha512": "YalNQZRXhnRwFYWcpuhXKXxP/zI8WnwaJ4vQqu9kTcL1JjGQuDT4stIbE68g6N8n9/RKjgbfMOihizDO4PMF1A==",
-      "type": "package",
-      "path": "microsoft.playwright/1.27.1",
-      "files": [
-        ".nupkg.metadata",
-        ".playwright/node/LICENSE",
-        ".playwright/node/linux-arm64/node",
-        ".playwright/node/linux-arm64/playwright.sh",
-        ".playwright/node/linux-x64/node",
-        ".playwright/node/linux-x64/playwright.sh",
-        ".playwright/node/mac/node",
-        ".playwright/node/mac/playwright.sh",
-        ".playwright/node/win32_x64/node.exe",
-        ".playwright/node/win32_x64/playwright.cmd",
-        ".playwright/package/README.md",
-        ".playwright/package/ThirdPartyNotices.txt",
-        ".playwright/package/api.json",
-        ".playwright/package/bin/PrintDeps.exe",
-        ".playwright/package/bin/README.md",
-        ".playwright/package/bin/android-driver-target.apk",
-        ".playwright/package/bin/android-driver.apk",
-        ".playwright/package/bin/container_install_deps.sh",
-        ".playwright/package/bin/container_run_server.sh",
-        ".playwright/package/bin/install_media_pack.ps1",
-        ".playwright/package/bin/reinstall_chrome_beta_linux.sh",
-        ".playwright/package/bin/reinstall_chrome_beta_mac.sh",
-        ".playwright/package/bin/reinstall_chrome_beta_win.ps1",
-        ".playwright/package/bin/reinstall_chrome_stable_linux.sh",
-        ".playwright/package/bin/reinstall_chrome_stable_mac.sh",
-        ".playwright/package/bin/reinstall_chrome_stable_win.ps1",
-        ".playwright/package/bin/reinstall_msedge_beta_linux.sh",
-        ".playwright/package/bin/reinstall_msedge_beta_mac.sh",
-        ".playwright/package/bin/reinstall_msedge_beta_win.ps1",
-        ".playwright/package/bin/reinstall_msedge_dev_linux.sh",
-        ".playwright/package/bin/reinstall_msedge_dev_mac.sh",
-        ".playwright/package/bin/reinstall_msedge_dev_win.ps1",
-        ".playwright/package/bin/reinstall_msedge_stable_linux.sh",
-        ".playwright/package/bin/reinstall_msedge_stable_mac.sh",
-        ".playwright/package/bin/reinstall_msedge_stable_win.ps1",
-        ".playwright/package/browsers.json",
-        ".playwright/package/cli.js",
-        ".playwright/package/index.d.ts",
-        ".playwright/package/index.js",
-        ".playwright/package/index.mjs",
-        ".playwright/package/lib/browserServerImpl.js",
-        ".playwright/package/lib/cli/cli.js",
-        ".playwright/package/lib/cli/driver.js",
-        ".playwright/package/lib/client/accessibility.js",
-        ".playwright/package/lib/client/android.js",
-        ".playwright/package/lib/client/api.js",
-        ".playwright/package/lib/client/artifact.js",
-        ".playwright/package/lib/client/browser.js",
-        ".playwright/package/lib/client/browserContext.js",
-        ".playwright/package/lib/client/browserType.js",
-        ".playwright/package/lib/client/cdpSession.js",
-        ".playwright/package/lib/client/channelOwner.js",
-        ".playwright/package/lib/client/clientHelper.js",
-        ".playwright/package/lib/client/clientInstrumentation.js",
-        ".playwright/package/lib/client/connection.js",
-        ".playwright/package/lib/client/consoleMessage.js",
-        ".playwright/package/lib/client/coverage.js",
-        ".playwright/package/lib/client/dialog.js",
-        ".playwright/package/lib/client/download.js",
-        ".playwright/package/lib/client/electron.js",
-        ".playwright/package/lib/client/elementHandle.js",
-        ".playwright/package/lib/client/events.js",
-        ".playwright/package/lib/client/fetch.js",
-        ".playwright/package/lib/client/fileChooser.js",
-        ".playwright/package/lib/client/frame.js",
-        ".playwright/package/lib/client/harRouter.js",
-        ".playwright/package/lib/client/input.js",
-        ".playwright/package/lib/client/joiningEventEmitter.js",
-        ".playwright/package/lib/client/jsHandle.js",
-        ".playwright/package/lib/client/jsonPipe.js",
-        ".playwright/package/lib/client/localUtils.js",
-        ".playwright/package/lib/client/locator.js",
-        ".playwright/package/lib/client/network.js",
-        ".playwright/package/lib/client/page.js",
-        ".playwright/package/lib/client/playwright.js",
-        ".playwright/package/lib/client/selectors.js",
-        ".playwright/package/lib/client/stream.js",
-        ".playwright/package/lib/client/tracing.js",
-        ".playwright/package/lib/client/types.js",
-        ".playwright/package/lib/client/video.js",
-        ".playwright/package/lib/client/waiter.js",
-        ".playwright/package/lib/client/worker.js",
-        ".playwright/package/lib/client/writableStream.js",
-        ".playwright/package/lib/common/debugLogger.js",
-        ".playwright/package/lib/common/errors.js",
-        ".playwright/package/lib/common/netUtils.js",
-        ".playwright/package/lib/common/socksProxy.js",
-        ".playwright/package/lib/common/timeoutSettings.js",
-        ".playwright/package/lib/common/types.js",
-        ".playwright/package/lib/common/userAgent.js",
-        ".playwright/package/lib/containers/docker.js",
-        ".playwright/package/lib/containers/dockerApi.js",
-        ".playwright/package/lib/generated/consoleApiSource.js",
-        ".playwright/package/lib/generated/injectedScriptSource.js",
-        ".playwright/package/lib/generated/recorderSource.js",
-        ".playwright/package/lib/generated/utilityScriptSource.js",
-        ".playwright/package/lib/grid/githubGridFactory.js",
-        ".playwright/package/lib/grid/gridAgent.js",
-        ".playwright/package/lib/grid/gridBrowserWorker.js",
-        ".playwright/package/lib/grid/gridServer.js",
-        ".playwright/package/lib/grid/simpleGridFactory.js",
-        ".playwright/package/lib/inProcessFactory.js",
-        ".playwright/package/lib/inprocess.js",
-        ".playwright/package/lib/outofprocess.js",
-        ".playwright/package/lib/protocol/debug.js",
-        ".playwright/package/lib/protocol/serializers.js",
-        ".playwright/package/lib/protocol/transport.js",
-        ".playwright/package/lib/protocol/validator.js",
-        ".playwright/package/lib/protocol/validatorPrimitives.js",
-        ".playwright/package/lib/remote/playwrightConnection.js",
-        ".playwright/package/lib/remote/playwrightServer.js",
-        ".playwright/package/lib/server/accessibility.js",
-        ".playwright/package/lib/server/android/android.js",
-        ".playwright/package/lib/server/android/backendAdb.js",
-        ".playwright/package/lib/server/artifact.js",
-        ".playwright/package/lib/server/browser.js",
-        ".playwright/package/lib/server/browserContext.js",
-        ".playwright/package/lib/server/browserType.js",
-        ".playwright/package/lib/server/chromium/appIcon.png",
-        ".playwright/package/lib/server/chromium/chromium.js",
-        ".playwright/package/lib/server/chromium/crAccessibility.js",
-        ".playwright/package/lib/server/chromium/crApp.js",
-        ".playwright/package/lib/server/chromium/crBrowser.js",
-        ".playwright/package/lib/server/chromium/crConnection.js",
-        ".playwright/package/lib/server/chromium/crCoverage.js",
-        ".playwright/package/lib/server/chromium/crDevTools.js",
-        ".playwright/package/lib/server/chromium/crDragDrop.js",
-        ".playwright/package/lib/server/chromium/crExecutionContext.js",
-        ".playwright/package/lib/server/chromium/crInput.js",
-        ".playwright/package/lib/server/chromium/crNetworkManager.js",
-        ".playwright/package/lib/server/chromium/crPage.js",
-        ".playwright/package/lib/server/chromium/crPdf.js",
-        ".playwright/package/lib/server/chromium/crProtocolHelper.js",
-        ".playwright/package/lib/server/chromium/crServiceWorker.js",
-        ".playwright/package/lib/server/chromium/defaultFontFamilies.js",
-        ".playwright/package/lib/server/chromium/videoRecorder.js",
-        ".playwright/package/lib/server/console.js",
-        ".playwright/package/lib/server/cookieStore.js",
-        ".playwright/package/lib/server/debugController.js",
-        ".playwright/package/lib/server/debugger.js",
-        ".playwright/package/lib/server/deviceDescriptors.js",
-        ".playwright/package/lib/server/deviceDescriptorsSource.json",
-        ".playwright/package/lib/server/dialog.js",
-        ".playwright/package/lib/server/dispatchers/androidDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/artifactDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/browserContextDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/browserDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/browserTypeDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/cdpSessionDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/consoleMessageDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/debugControllerDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/dialogDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/dispatcher.js",
-        ".playwright/package/lib/server/dispatchers/electronDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/elementHandlerDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/frameDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/jsHandleDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/jsonPipeDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/localUtilsDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/networkDispatchers.js",
-        ".playwright/package/lib/server/dispatchers/pageDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/playwrightDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/selectorsDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/streamDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/tracingDispatcher.js",
-        ".playwright/package/lib/server/dispatchers/writableStreamDispatcher.js",
-        ".playwright/package/lib/server/dom.js",
-        ".playwright/package/lib/server/download.js",
-        ".playwright/package/lib/server/electron/electron.js",
-        ".playwright/package/lib/server/fetch.js",
-        ".playwright/package/lib/server/fileChooser.js",
-        ".playwright/package/lib/server/firefox/ffAccessibility.js",
-        ".playwright/package/lib/server/firefox/ffBrowser.js",
-        ".playwright/package/lib/server/firefox/ffConnection.js",
-        ".playwright/package/lib/server/firefox/ffExecutionContext.js",
-        ".playwright/package/lib/server/firefox/ffInput.js",
-        ".playwright/package/lib/server/firefox/ffNetworkManager.js",
-        ".playwright/package/lib/server/firefox/ffPage.js",
-        ".playwright/package/lib/server/firefox/firefox.js",
-        ".playwright/package/lib/server/formData.js",
-        ".playwright/package/lib/server/frames.js",
-        ".playwright/package/lib/server/har/harRecorder.js",
-        ".playwright/package/lib/server/har/harTracer.js",
-        ".playwright/package/lib/server/helper.js",
-        ".playwright/package/lib/server/index.js",
-        ".playwright/package/lib/server/input.js",
-        ".playwright/package/lib/server/instrumentation.js",
-        ".playwright/package/lib/server/isomorphic/cssParser.js",
-        ".playwright/package/lib/server/isomorphic/cssTokenizer.js",
-        ".playwright/package/lib/server/isomorphic/locatorGenerators.js",
-        ".playwright/package/lib/server/isomorphic/selectorParser.js",
-        ".playwright/package/lib/server/isomorphic/utilityScriptSerializers.js",
-        ".playwright/package/lib/server/javascript.js",
-        ".playwright/package/lib/server/macEditingCommands.js",
-        ".playwright/package/lib/server/network.js",
-        ".playwright/package/lib/server/page.js",
-        ".playwright/package/lib/server/pipeTransport.js",
-        ".playwright/package/lib/server/playwright.js",
-        ".playwright/package/lib/server/progress.js",
-        ".playwright/package/lib/server/protocolError.js",
-        ".playwright/package/lib/server/recorder.js",
-        ".playwright/package/lib/server/recorder/codeGenerator.js",
-        ".playwright/package/lib/server/recorder/csharp.js",
-        ".playwright/package/lib/server/recorder/java.js",
-        ".playwright/package/lib/server/recorder/javascript.js",
-        ".playwright/package/lib/server/recorder/language.js",
-        ".playwright/package/lib/server/recorder/python.js",
-        ".playwright/package/lib/server/recorder/recorderActions.js",
-        ".playwright/package/lib/server/recorder/recorderApp.js",
-        ".playwright/package/lib/server/recorder/recorderUtils.js",
-        ".playwright/package/lib/server/recorder/utils.js",
-        ".playwright/package/lib/server/registry/browserFetcher.js",
-        ".playwright/package/lib/server/registry/dependencies.js",
-        ".playwright/package/lib/server/registry/download.js",
-        ".playwright/package/lib/server/registry/index.js",
-        ".playwright/package/lib/server/registry/nativeDeps.js",
-        ".playwright/package/lib/server/registry/oopDownloadMain.js",
-        ".playwright/package/lib/server/screenshotter.js",
-        ".playwright/package/lib/server/selectors.js",
-        ".playwright/package/lib/server/trace/recorder/snapshotter.js",
-        ".playwright/package/lib/server/trace/recorder/snapshotterInjected.js",
-        ".playwright/package/lib/server/trace/recorder/tracing.js",
-        ".playwright/package/lib/server/trace/test/inMemorySnapshotter.js",
-        ".playwright/package/lib/server/trace/viewer/traceViewer.js",
-        ".playwright/package/lib/server/transport.js",
-        ".playwright/package/lib/server/types.js",
-        ".playwright/package/lib/server/usKeyboardLayout.js",
-        ".playwright/package/lib/server/webkit/webkit.js",
-        ".playwright/package/lib/server/webkit/wkAccessibility.js",
-        ".playwright/package/lib/server/webkit/wkBrowser.js",
-        ".playwright/package/lib/server/webkit/wkConnection.js",
-        ".playwright/package/lib/server/webkit/wkExecutionContext.js",
-        ".playwright/package/lib/server/webkit/wkInput.js",
-        ".playwright/package/lib/server/webkit/wkInterceptableRequest.js",
-        ".playwright/package/lib/server/webkit/wkPage.js",
-        ".playwright/package/lib/server/webkit/wkProvisionalPage.js",
-        ".playwright/package/lib/server/webkit/wkWorkers.js",
-        ".playwright/package/lib/third_party/diff_match_patch.js",
-        ".playwright/package/lib/third_party/pixelmatch.js",
-        ".playwright/package/lib/utils/comparators.js",
-        ".playwright/package/lib/utils/eventsHelper.js",
-        ".playwright/package/lib/utils/fileUtils.js",
-        ".playwright/package/lib/utils/hostPlatform.js",
-        ".playwright/package/lib/utils/httpServer.js",
-        ".playwright/package/lib/utils/index.js",
-        ".playwright/package/lib/utils/isomorphic/stringUtils.js",
-        ".playwright/package/lib/utils/linuxUtils.js",
-        ".playwright/package/lib/utils/manualPromise.js",
-        ".playwright/package/lib/utils/mimeType.js",
-        ".playwright/package/lib/utils/multimap.js",
-        ".playwright/package/lib/utils/processLauncher.js",
-        ".playwright/package/lib/utils/processLauncherCleanupEntrypoint.js",
-        ".playwright/package/lib/utils/spawnAsync.js",
-        ".playwright/package/lib/utils/stackTrace.js",
-        ".playwright/package/lib/utils/timeoutRunner.js",
-        ".playwright/package/lib/utils/zipFile.js",
-        ".playwright/package/lib/utils/zones.js",
-        ".playwright/package/lib/utilsBundle.js",
-        ".playwright/package/lib/utilsBundleImpl.js",
-        ".playwright/package/lib/webpack/htmlReport/index.html",
-        ".playwright/package/lib/webpack/recorder/assets/codicon.dcd00fb4.ttf",
-        ".playwright/package/lib/webpack/recorder/assets/index.be943575.js",
-        ".playwright/package/lib/webpack/recorder/assets/index.ff9b1db9.css",
-        ".playwright/package/lib/webpack/recorder/icon-16x16.png",
-        ".playwright/package/lib/webpack/recorder/icon-192x192.png",
-        ".playwright/package/lib/webpack/recorder/icon-256x256.png",
-        ".playwright/package/lib/webpack/recorder/icon-32x32.png",
-        ".playwright/package/lib/webpack/recorder/icon-384x384.png",
-        ".playwright/package/lib/webpack/recorder/icon-512x512.png",
-        ".playwright/package/lib/webpack/recorder/index.html",
-        ".playwright/package/lib/webpack/traceViewer/codicon.dcd00fb4.ttf",
-        ".playwright/package/lib/webpack/traceViewer/icon-16x16.png",
-        ".playwright/package/lib/webpack/traceViewer/icon-192x192.png",
-        ".playwright/package/lib/webpack/traceViewer/icon-256x256.png",
-        ".playwright/package/lib/webpack/traceViewer/icon-32x32.png",
-        ".playwright/package/lib/webpack/traceViewer/icon-384x384.png",
-        ".playwright/package/lib/webpack/traceViewer/icon-512x512.png",
-        ".playwright/package/lib/webpack/traceViewer/index.html",
-        ".playwright/package/lib/webpack/traceViewer/main.24b347b6.css",
-        ".playwright/package/lib/webpack/traceViewer/main.740bbc63.js",
-        ".playwright/package/lib/webpack/traceViewer/sw.bundle.js",
-        ".playwright/package/lib/zipBundle.js",
-        ".playwright/package/lib/zipBundleImpl.js",
-        ".playwright/package/package.json",
-        ".playwright/package/protocol.yml",
-        ".playwright/package/types/protocol.d.ts",
-        ".playwright/package/types/structs.d.ts",
-        ".playwright/package/types/types.d.ts",
-        ".signature.p7s",
-        "build/Microsoft.Playwright.targets",
-        "build/playwright.ps1",
-        "buildTransitive/Microsoft.Playwright.targets",
-        "buildTransitive/playwright.ps1",
-        "icon.png",
-        "lib/netstandard2.0/Microsoft.Playwright.dll",
-        "lib/netstandard2.0/Microsoft.Playwright.xml",
-        "microsoft.playwright.1.27.1.nupkg.sha512",
-        "microsoft.playwright.nuspec"
-      ]
-    },
-    "Microsoft.Playwright.MSTest/1.27.1": {
-      "sha512": "umDfphVfJpd8ww+cGIb7+h0p5t+/PqS+nQL8fXUqT5fMKkfKpI+4S9HUhsssKSE9XarxWlLZeys22p9vVt9ZuA==",
-      "type": "package",
-      "path": "microsoft.playwright.mstest/1.27.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/netstandard2.0/Microsoft.Playwright.MSTest.dll",
-        "microsoft.playwright.mstest.1.27.1.nupkg.sha512",
-        "microsoft.playwright.mstest.nuspec"
-      ]
-    },
-    "Microsoft.Playwright.TestAdapter/1.27.1": {
-      "sha512": "8r++CrGOFP4qazxRae2YqWpinVHrd9cxbLYIkyZZBT1IGnw8bD71dDpt2EMA6gDChn3VT8Fpg+d3gyVUyP8LUg==",
-      "type": "package",
-      "path": "microsoft.playwright.testadapter/1.27.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/netstandard2.0/Microsoft.Playwright.TestAdapter.dll",
-        "microsoft.playwright.testadapter.1.27.1.nupkg.sha512",
-        "microsoft.playwright.testadapter.nuspec"
-      ]
-    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "sha512": "N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "type": "package",
@@ -9231,290 +8912,6 @@
         "readme.md"
       ]
     },
-    "MSTest.TestAdapter/3.0.4": {
-      "sha512": "18THEGVcU4fbAOZWvRtEyvQCnZ/o+3LFAiFbAkWYh63GC5TmHoJ10IUiF9L02SMmbLbWpH1/PxvO7mcInIY4/Q==",
-      "type": "package",
-      "path": "mstest.testadapter/3.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/_localization/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/cs/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/cs/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/de/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/de/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/de/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/de/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/es/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/es/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/es/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/es/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/fr/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/fr/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/it/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/it/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/it/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/it/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/ja/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/ja/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/ko/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/ko/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/pl/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/pl/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/pt-BR/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/pt-BR/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/ru/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/ru/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/tr/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/tr/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/zh-Hans/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/zh-Hans/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/_localization/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/_localization/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
-        "build/_localization/zh-Hant/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll",
-        "build/_localization/zh-Hant/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll",
-        "build/_localization/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
-        "build/_localization/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "build/net462/MSTest.TestAdapter.props",
-        "build/net462/MSTest.TestAdapter.targets",
-        "build/net462/Microsoft.TestPlatform.AdapterUtilities.dll",
-        "build/net462/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll",
-        "build/net462/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
-        "build/net462/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "build/net462/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net462/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/MSTest.TestAdapter.props",
-        "build/net6.0/MSTest.TestAdapter.targets",
-        "build/net6.0/Microsoft.TestPlatform.AdapterUtilities.dll",
-        "build/net6.0/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll",
-        "build/net6.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
-        "build/net6.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "build/net6.0/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/winui/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
-        "build/net6.0/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/net6.0/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/MSTest.TestAdapter.props",
-        "build/netcoreapp3.1/Microsoft.TestPlatform.AdapterUtilities.dll",
-        "build/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll",
-        "build/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
-        "build/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "build/netcoreapp3.1/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netcoreapp3.1/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/MSTest.TestAdapter.props",
-        "build/netstandard2.0/Microsoft.TestPlatform.AdapterUtilities.dll",
-        "build/netstandard2.0/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll",
-        "build/netstandard2.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
-        "build/netstandard2.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "build/netstandard2.0/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/netstandard2.0/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/MSTest.TestAdapter.props",
-        "build/uap10.0/MSTest.TestAdapter.targets",
-        "build/uap10.0/Microsoft.TestPlatform.AdapterUtilities.dll",
-        "build/uap10.0/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll",
-        "build/uap10.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll",
-        "build/uap10.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "build/uap10.0/cs/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/de/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/es/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/fr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/it/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/ja/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/ko/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/pl/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/pt-BR/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/ru/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/tr/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/zh-Hans/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "build/uap10.0/zh-Hant/Microsoft.TestPlatform.AdapterUtilities.resources.dll",
-        "mstest.testadapter.3.0.4.nupkg.sha512",
-        "mstest.testadapter.nuspec"
-      ]
-    },
-    "MSTest.TestFramework/3.0.4": {
-      "sha512": "hYq5xOOr2k09rtXpmcHkJ4Tdt/yS4cy8jiFPNMdDJP+lB6OY8yekOmQC4Fsvug4rhLpXGDd6zbPWYeoewqfePA==",
-      "type": "package",
-      "path": "mstest.testframework/3.0.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/net6.0/MSTest.TestFramework.targets",
-        "build/net6.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
-        "build/net6.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
-        "build/net6.0/winui/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
-        "build/net6.0/winui/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
-        "lib/net462/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
-        "lib/net462/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
-        "lib/net462/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "lib/net462/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net462/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/de/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/es/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/it/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net462/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "lib/net6.0/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/net6.0/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/de/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/es/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/it/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/net6.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
-        "lib/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
-        "lib/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "lib/netcoreapp3.1/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/netcoreapp3.1/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/de/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/es/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/it/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netcoreapp3.1/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
-        "lib/netstandard2.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
-        "lib/netstandard2.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "lib/netstandard2.0/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/netstandard2.0/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/de/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/es/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/it/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/netstandard2.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
-        "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml",
-        "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
-        "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.TestFramework.xml",
-        "lib/uap10.0/cs/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/de/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/es/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/fr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/it/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/ja/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/ko/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/pl/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/pt-BR/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/ru/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/tr/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "lib/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll",
-        "mstest.testframework.3.0.4.nupkg.sha512",
-        "mstest.testframework.nuspec"
-      ]
-    },
     "NETStandard.Library/1.6.1": {
       "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "type": "package",
@@ -10282,25 +9679,80 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.ComponentModel.Annotations/5.0.0": {
-      "sha512": "dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
+    "System.ComponentModel/4.3.0": {
+      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
       "type": "package",
-      "path": "system.componentmodel.annotations/5.0.0",
+      "path": "system.componentmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.ComponentModel.dll",
+        "lib/netstandard1.3/System.ComponentModel.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.ComponentModel.dll",
+        "ref/netcore50/System.ComponentModel.xml",
+        "ref/netcore50/de/System.ComponentModel.xml",
+        "ref/netcore50/es/System.ComponentModel.xml",
+        "ref/netcore50/fr/System.ComponentModel.xml",
+        "ref/netcore50/it/System.ComponentModel.xml",
+        "ref/netcore50/ja/System.ComponentModel.xml",
+        "ref/netcore50/ko/System.ComponentModel.xml",
+        "ref/netcore50/ru/System.ComponentModel.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.xml",
+        "ref/netstandard1.0/System.ComponentModel.dll",
+        "ref/netstandard1.0/System.ComponentModel.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.4.3.0.nupkg.sha512",
+        "system.componentmodel.nuspec"
+      ]
+    },
+    "System.ComponentModel.Annotations/4.3.0": {
+      "sha512": "SY2RLItHt43rd8J9D8M8e8NM4m+9WLN2uUd9G0n1I4hj/7w+v3pzK6ZBjexlG1/2xvLKQsqir3UGVSyBTXMLWA==",
+      "type": "package",
+      "path": "system.componentmodel.annotations/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
         "lib/net461/System.ComponentModel.Annotations.dll",
         "lib/netcore50/System.ComponentModel.Annotations.dll",
         "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
-        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
-        "lib/netstandard2.1/System.ComponentModel.Annotations.dll",
-        "lib/netstandard2.1/System.ComponentModel.Annotations.xml",
         "lib/portable-net45+win8/_._",
         "lib/win8/_._",
         "lib/xamarinios10/_._",
@@ -10311,7 +9763,6 @@
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
         "ref/net461/System.ComponentModel.Annotations.dll",
-        "ref/net461/System.ComponentModel.Annotations.xml",
         "ref/netcore50/System.ComponentModel.Annotations.dll",
         "ref/netcore50/System.ComponentModel.Annotations.xml",
         "ref/netcore50/de/System.ComponentModel.Annotations.xml",
@@ -10356,20 +9807,14 @@
         "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
         "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
         "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
-        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
-        "ref/netstandard2.1/System.ComponentModel.Annotations.dll",
-        "ref/netstandard2.1/System.ComponentModel.Annotations.xml",
         "ref/portable-net45+win8/_._",
         "ref/win8/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.5.0.0.nupkg.sha512",
-        "system.componentmodel.annotations.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "system.componentmodel.annotations.4.3.0.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec"
       ]
     },
     "System.Composition/7.0.0": {
@@ -14153,6 +13598,151 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "xunit/2.4.2": {
+      "sha512": "6Mj73Ont3zj2CJuoykVJfE0ZmRwn7C+pTuRP8c4bnaaTFjwNG6tGe0prJ1yIbMe9AHrpDys63ctWacSsFJWK/w==",
+      "type": "package",
+      "path": "xunit/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/logo-128-transparent.png",
+        "xunit.2.4.2.nupkg.sha512",
+        "xunit.nuspec"
+      ]
+    },
+    "xunit.abstractions/2.0.3": {
+      "sha512": "pot1I4YOxlWjIb5jmwvvQNbTrZ3lJQ+jUGkGjWE3hEFM0l5gOnBWS+H3qsex68s5cO52g+44vpGzhAt+42vwKg==",
+      "type": "package",
+      "path": "xunit.abstractions/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/xunit.abstractions.dll",
+        "lib/net35/xunit.abstractions.xml",
+        "lib/netstandard1.0/xunit.abstractions.dll",
+        "lib/netstandard1.0/xunit.abstractions.xml",
+        "lib/netstandard2.0/xunit.abstractions.dll",
+        "lib/netstandard2.0/xunit.abstractions.xml",
+        "xunit.abstractions.2.0.3.nupkg.sha512",
+        "xunit.abstractions.nuspec"
+      ]
+    },
+    "xunit.analyzers/1.0.0": {
+      "sha512": "BeO8hEgs/c8Ls2647fPfieMngncvf0D0xYNDfIO59MolxtCtVjFRd6SRc+7tj8VMqkVOuJcnc9eh4ngI2cAmLQ==",
+      "type": "package",
+      "path": "xunit.analyzers/1.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/logo-128-transparent.png",
+        "analyzers/dotnet/cs/xunit.analyzers.dll",
+        "analyzers/dotnet/cs/xunit.analyzers.fixes.dll",
+        "tools/install.ps1",
+        "tools/uninstall.ps1",
+        "xunit.analyzers.1.0.0.nupkg.sha512",
+        "xunit.analyzers.nuspec"
+      ]
+    },
+    "xunit.assert/2.4.2": {
+      "sha512": "pxJISOFjn2XTTi1mcDCkRZrTFb9OtRRCtx2kZFNF51GdReLr1ls2rnyxvAS4JO247K3aNtflvh5Q0346K5BROA==",
+      "type": "package",
+      "path": "xunit.assert/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/logo-128-transparent.png",
+        "lib/netstandard1.1/xunit.assert.dll",
+        "lib/netstandard1.1/xunit.assert.xml",
+        "xunit.assert.2.4.2.nupkg.sha512",
+        "xunit.assert.nuspec"
+      ]
+    },
+    "xunit.core/2.4.2": {
+      "sha512": "KB4yGCxNqIVyekhJLXtKSEq6BaXVp/JO3mbGVE1hxypZTLEe7h+sTbAhpA+yZW2dPtXTuiW+C1B2oxxHEkrmOw==",
+      "type": "package",
+      "path": "xunit.core/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/logo-128-transparent.png",
+        "build/xunit.core.props",
+        "build/xunit.core.targets",
+        "buildMultiTargeting/xunit.core.props",
+        "buildMultiTargeting/xunit.core.targets",
+        "xunit.core.2.4.2.nupkg.sha512",
+        "xunit.core.nuspec"
+      ]
+    },
+    "xunit.extensibility.core/2.4.2": {
+      "sha512": "W1BoXTIN1C6kpVSMw25huSet25ky6IAQUNovu3zGOGN/jWnbgSoTyCrlIhmXSg0tH5nEf8q7h3OjNHOjyu5PfA==",
+      "type": "package",
+      "path": "xunit.extensibility.core/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/logo-128-transparent.png",
+        "lib/net452/xunit.core.dll",
+        "lib/net452/xunit.core.dll.tdnet",
+        "lib/net452/xunit.core.xml",
+        "lib/net452/xunit.runner.tdnet.dll",
+        "lib/net452/xunit.runner.utility.net452.dll",
+        "lib/netstandard1.1/xunit.core.dll",
+        "lib/netstandard1.1/xunit.core.xml",
+        "xunit.extensibility.core.2.4.2.nupkg.sha512",
+        "xunit.extensibility.core.nuspec"
+      ]
+    },
+    "xunit.extensibility.execution/2.4.2": {
+      "sha512": "CZmgcKkwpyo8FlupZdWpJCryrAOWLh1FBPG6gmVZuPQkGQsim/oL4PcP4nfrC2hHgXUFtluvaJ0Sp9PQKUMNpg==",
+      "type": "package",
+      "path": "xunit.extensibility.execution/2.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "_content/logo-128-transparent.png",
+        "lib/net452/xunit.execution.desktop.dll",
+        "lib/net452/xunit.execution.desktop.xml",
+        "lib/netstandard1.1/xunit.execution.dotnet.dll",
+        "lib/netstandard1.1/xunit.execution.dotnet.xml",
+        "xunit.extensibility.execution.2.4.2.nupkg.sha512",
+        "xunit.extensibility.execution.nuspec"
+      ]
+    },
+    "xunit.runner.visualstudio/2.4.5": {
+      "sha512": "OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
+      "type": "package",
+      "path": "xunit.runner.visualstudio/2.4.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/net462/xunit.abstractions.dll",
+        "build/net462/xunit.runner.reporters.net452.dll",
+        "build/net462/xunit.runner.utility.net452.dll",
+        "build/net462/xunit.runner.visualstudio.props",
+        "build/net462/xunit.runner.visualstudio.testadapter.dll",
+        "build/netcoreapp3.1/xunit.abstractions.dll",
+        "build/netcoreapp3.1/xunit.runner.reporters.netcoreapp10.dll",
+        "build/netcoreapp3.1/xunit.runner.utility.netcoreapp10.dll",
+        "build/netcoreapp3.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll",
+        "build/netcoreapp3.1/xunit.runner.visualstudio.props",
+        "build/uap10.0.16299/xunit.runner.reporters.netstandard15.dll",
+        "build/uap10.0.16299/xunit.runner.utility.netstandard15.dll",
+        "build/uap10.0.16299/xunit.runner.utility.uwp10.dll",
+        "build/uap10.0.16299/xunit.runner.utility.uwp10.pri",
+        "build/uap10.0.16299/xunit.runner.visualstudio.props",
+        "build/uap10.0.16299/xunit.runner.visualstudio.targets",
+        "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.dll",
+        "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.pri",
+        "lib/net462/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/uap10.0.16299/_._",
+        "logo-512-transparent.png",
+        "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
+        "xunit.runner.visualstudio.nuspec"
+      ]
+    },
     "Api/1.0.0": {
       "type": "project",
       "path": "../Api/Api.csproj",
@@ -14169,12 +13759,11 @@
       "Api >= 1.0.0",
       "AutoFixture.AutoMoq >= 4.18.1",
       "ConsoleApp >= 1.0.0",
-      "MSTest.TestAdapter >= 3.0.4",
-      "MSTest.TestFramework >= 3.0.4",
       "Microsoft.NET.Test.Sdk >= 17.6.0",
-      "Microsoft.Playwright.MSTest >= 1.27.1",
       "Moq >= 4.20.70",
-      "coverlet.collector >= 6.0.0"
+      "coverlet.collector >= 6.0.0",
+      "xunit >= 2.4.2",
+      "xunit.runner.visualstudio >= 2.4.5"
     ]
   },
   "packageFolders": {
@@ -14232,29 +13821,29 @@
             "target": "Package",
             "version": "[4.18.1, )"
           },
-          "MSTest.TestAdapter": {
-            "target": "Package",
-            "version": "[3.0.4, )"
-          },
-          "MSTest.TestFramework": {
-            "target": "Package",
-            "version": "[3.0.4, )"
-          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.6.0, )"
-          },
-          "Microsoft.Playwright.MSTest": {
-            "target": "Package",
-            "version": "[1.27.1, )"
           },
           "Moq": {
             "target": "Package",
             "version": "[4.20.70, )"
           },
           "coverlet.collector": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.0, )"
+          },
+          "xunit": {
+            "target": "Package",
+            "version": "[2.4.2, )"
+          },
+          "xunit.runner.visualstudio": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.4.5, )"
           }
         },
         "imports": [

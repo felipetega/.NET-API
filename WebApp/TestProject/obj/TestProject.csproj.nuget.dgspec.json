@@ -200,29 +200,29 @@
               "target": "Package",
               "version": "[4.18.1, )"
             },
-            "MSTest.TestAdapter": {
-              "target": "Package",
-              "version": "[3.0.4, )"
-            },
-            "MSTest.TestFramework": {
-              "target": "Package",
-              "version": "[3.0.4, )"
-            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.6.0, )"
-            },
-            "Microsoft.Playwright.MSTest": {
-              "target": "Package",
-              "version": "[1.27.1, )"
             },
             "Moq": {
               "target": "Package",
               "version": "[4.20.70, )"
             },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
             }
           },
           "imports": [
