@@ -1,5 +1,4 @@
 ﻿using Api.Application.ViewModel;
-using Api.Infrastructure.Models;
 using Api.Services.DTOs;
 using Api.Services.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -17,89 +16,173 @@ namespace Api.Application.Controllers
         }
 
         [HttpGet("api")]
+        // SWAGGER DOCUMENTATION
+        [ProducesResponseType(typeof(List<CityView>), 200)] // OK
+        [ProducesResponseType(204)] // No Content
+        [ProducesResponseType(500)] // Internal Server Error
         public async Task<ActionResult<List<CityView>>> GetAll()
         {
-            IEnumerable<CityDTO> cityDTOs = await _cityRepository.GetAll();
-            List<CityView> cityViews = cityDTOs.Select(cityDTO => new CityView
+            try
             {
-                CityName = cityDTO.CityName,
-                StateName = cityDTO.StateName
-            }).ToList();
+                IEnumerable<CityDTO> cityDTOs = await _cityRepository.GetAll();
 
-            return Ok(cityViews);
+                if (cityDTOs == null || !cityDTOs.Any())
+                {
+                    return NoContent();
+                }
+
+                List<CityView> cityViews = cityDTOs.Select(cityDTO => new CityView
+                {
+                    CityName = cityDTO.CityName,
+                    StateName = cityDTO.StateName
+                }).ToList();
+
+                return Ok(cityViews);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
         }
+
 
 
         [HttpGet("api/{id}")]
+        // SWAGGER DOCUMENTATION
+        [ProducesResponseType(typeof(CityView), 200)] // OK
+        [ProducesResponseType(404)] // Not Found
+        [ProducesResponseType(500)] // Internal Server Error
         public async Task<ActionResult<CityView>> GetById(int id)
         {
-            CityDTO cityDTO = await _cityRepository.GetById(id);
-
-            if (cityDTO == null)
+            try
             {
-                return NotFound();
+                CityDTO cityDTO = await _cityRepository.GetById(id);
+
+                if (cityDTO == null)
+                {
+                    return NotFound();
+                }
+
+                CityView cityView = new CityView
+                {
+                    CityName = cityDTO.CityName,
+                    StateName = cityDTO.StateName
+                };
+
+                return Ok(cityView);
             }
-
-            CityView cityView = new CityView
+            catch (Exception ex)
             {
-                CityName = cityDTO.CityName,
-                StateName = cityDTO.StateName
-            };
-
-            return Ok(cityView);
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
         }
+
 
 
         [HttpPost("api/create")]
+        // SWAGGER DOCUMENTATION
+        [ProducesResponseType(typeof(CityView), 201)] // Created
+        [ProducesResponseType(400)] // Bad Request
+        [ProducesResponseType(500)] // Internal Server Error
         public async Task<ActionResult<CityView>> Create([FromBody] CityView cityView)
         {
-            CityDTO cityDTO = new CityDTO
+            try
             {
-                CityName = cityView.CityName,
-                StateName = cityView.StateName
-            };
+                if (cityView == null || string.IsNullOrWhiteSpace(cityView.CityName) || string.IsNullOrWhiteSpace(cityView.StateName))
+                {
+                    return BadRequest("Invalid input. CityName and StateName are required.");
+                }
 
-            await _cityRepository.Create(cityDTO);
+                CityDTO cityDTO = new CityDTO
+                {
+                    CityName = cityView.CityName,
+                    StateName = cityView.StateName
+                };
 
+                await _cityRepository.Create(cityDTO);
 
-            return StatusCode(201, cityView);
+                return StatusCode(201, cityView);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
         }
+
+
 
 
         [HttpPut("api/update/{id}")]
+        // SWAGGER DOCUMENTATION
+        [ProducesResponseType(typeof(CityView), 200)] // OK
+        [ProducesResponseType(404)] // Not Found
+        [ProducesResponseType(400)] // Bad Request
+        [ProducesResponseType(500)] // Internal Server Error
         public async Task<ActionResult<CityView>> Update([FromBody] CityView cityView, int id)
         {
-            CityDTO cityDTO = new CityDTO
+            try
             {
-                Id = id,
-                CityName = cityView.CityName,
-                StateName = cityView.StateName
-            };
+                CityDTO cityDTO = new CityDTO
+                {
+                    Id = id,
+                    CityName = cityView.CityName,
+                    StateName = cityView.StateName
+                };
 
-            CityDTO updatedCityDTO = await _cityRepository.Update(cityDTO, id);
+                CityDTO updatedCityDTO = await _cityRepository.Update(cityDTO, id);
 
-            if (updatedCityDTO == null)
-            {
-                return NotFound();
+                if (updatedCityDTO == null)
+                {
+                    return NotFound();
+                }
+
+                if (cityView == null || string.IsNullOrWhiteSpace(cityView.CityName) || string.IsNullOrWhiteSpace(cityView.StateName))
+                {
+                    return BadRequest("Invalid input. CityName and StateName are required.");
+                }
+
+                CityView updatedCityView = new CityView
+                {
+                    CityName = updatedCityDTO.CityName,
+                    StateName = updatedCityDTO.StateName
+                };
+
+                return Ok(updatedCityView);
             }
-
-            CityView updatedCityView = new CityView
+            catch (Exception ex)
             {
-                CityName = updatedCityDTO.CityName,
-                StateName = updatedCityDTO.StateName
-            };
-
-            return Ok(updatedCityView);
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
         }
+
+
 
 
 
         [HttpDelete("api/delete/{id}")]
+        // SWAGGER DOCUMENTATION
+        [ProducesResponseType(typeof(bool), 200)] // OK
+        [ProducesResponseType(404)] // Not Found
+        [ProducesResponseType(500)] // Internal Server Error
         public async Task<ActionResult<CityView>> Delete(int id)
         {
-            bool deleted = await _cityRepository.Delete(id);
-            return Ok(deleted);
+            try
+            {
+                bool deleted = await _cityRepository.Delete(id);
+
+                if (!deleted)
+                {
+                    return NotFound();
+                }
+
+                return Ok(deleted);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
         }
+
 
     }
 }
