@@ -20,4 +20,25 @@ describe('CityCardComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should track items by id', () => {
+    component.data = [
+      { id: 1, cityName: 'City A', stateName: 'State A' },
+      { id: 2, cityName: 'City B', stateName: 'State B' },
+    ];
+
+    fixture.detectChanges();
+
+    component.data = [
+      { id: 1, cityName: 'Updated City A', stateName: 'Updated State A' },
+      { id: 2, cityName: 'City B', stateName: 'State B' },
+    ];
+
+    fixture.detectChanges();
+
+    const compiled = fixture.debugElement.nativeElement;
+
+    expect(compiled.querySelector('.city-name').textContent).toContain('Updated City A');
+    expect(compiled.querySelector('.state-name').textContent).toContain('Updated State A');
+  });
 });
