@@ -23,19 +23,19 @@ namespace ConsoleApp.Services
         {
             string jsonBody = JsonSerializer.Serialize(newCity);
             HttpContent content = new StringContent(jsonBody, Encoding.UTF8, "application/json");
-            return await client.PostAsync($"{apiUrl}/create", content);
+            return await client.PostAsync($"{apiUrl}", content);
         }
 
         public async Task<HttpResponseMessage> PutAsync(string apiUrl, int id, City updatedCity)
         {
             string jsonBody = JsonSerializer.Serialize(updatedCity);
             HttpContent content = new StringContent(jsonBody, Encoding.UTF8, "application/json");
-            return await client.PutAsync($"{apiUrl}/update/{id}", content);
+            return await client.PutAsync($"{apiUrl}/{id}", content);
         }
 
         public async Task<HttpResponseMessage> DeleteAsync(string apiUrl, int id)
         {
-            return await client.DeleteAsync($"{apiUrl}/delete/{id}");
+            return await client.DeleteAsync($"{apiUrl}/{id}");
         }
     }
 

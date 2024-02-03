@@ -79,7 +79,7 @@ namespace Api.Application.Controllers
 
 
 
-        [HttpPost("api/create")]
+        [HttpPost("api")]
         // SWAGGER DOCUMENTATION
         [ProducesResponseType(typeof(CityView), 201)] // Created
         [ProducesResponseType(400)] // Bad Request
@@ -112,7 +112,7 @@ namespace Api.Application.Controllers
 
 
 
-        [HttpPut("api/update/{id}")]
+        [HttpPut("api/{id}")]
         // SWAGGER DOCUMENTATION
         [ProducesResponseType(typeof(CityView), 200)] // OK
         [ProducesResponseType(404)] // Not Found
@@ -159,7 +159,7 @@ namespace Api.Application.Controllers
 
 
 
-        [HttpDelete("api/delete/{id}")]
+        [HttpDelete("api/{id}")]
         // SWAGGER DOCUMENTATION
         [ProducesResponseType(typeof(bool), 200)] // OK
         [ProducesResponseType(404)] // Not Found
