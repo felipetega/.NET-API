@@ -105,9 +105,6 @@ C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\appsettings.Develop
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\appsettings.json
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\Api.staticwebassets.runtime.json
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\Api.exe
-C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\ConsoleApp.deps.json
-C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\ConsoleApp.runtimeconfig.json
-C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\ConsoleApp.exe
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\Azure.Core.dll
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\Azure.Identity.dll
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\Castle.Core.dll
@@ -341,9 +338,7 @@ C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\runtimes\win\lib\ne
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\Api.dll
-C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\ConsoleApp.dll
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\Api.pdb
-C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\ConsoleApp.pdb
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\AutoFixture.dll
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\AutoFixture.AutoMoq.dll
 C:\dev\PROJETOS\.NET-API\WebApp\TestProject\bin\Debug\net8.0\Fare.dll

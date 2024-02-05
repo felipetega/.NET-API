@@ -10,7 +10,6 @@
         "dependencies": {
           "Api": "1.0.0",
           "AutoFixture.AutoMoq": "4.18.1",
-          "ConsoleApp": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.6.0",
           "Moq": "4.20.70",
           "coverlet.collector": "6.0.0",
@@ -3015,11 +3014,6 @@
         "runtime": {
           "Api.dll": {}
         }
-      },
-      "ConsoleApp/1.0.0": {
-        "runtime": {
-          "ConsoleApp.dll": {}
-        }
       }
     }
   },
@@ -4822,11 +4816,6 @@
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     },
     "Api/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ConsoleApp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
