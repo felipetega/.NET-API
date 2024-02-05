@@ -1,0 +1,20 @@
+<h2>City Update</h2>
+<div class="city-form">
+    
+    <label for="id">Id:</label>
+    <input type="text" id="id" [(ngModel)]="id"/>
+  
+    <label for="cityName">City Name:</label>
+    <input type="text" id="cityName" [(ngModel)]="cityName"/>
+  
+    <label for="stateName">State Name:</label>
+    <input type="text" id="stateName" [(ngModel)]="stateName"/>
+  
+    <button (click)="updateCity()">Update City</button>
+
+    <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+        <button (click)="closeSuccessMessage()">Close</button>
+    </div>
+  </div>
+  

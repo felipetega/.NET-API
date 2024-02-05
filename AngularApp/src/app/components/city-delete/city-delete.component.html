@@ -1,0 +1,14 @@
+<h2>Delete City</h2>
+<div class="city-form">
+    
+    <label for="id">Id:</label>
+    <input type="text" id="id" [(ngModel)]="id"/>
+  
+    <button (click)="deleteCity()">Delete City</button>
+
+    <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+        <button (click)="closeSuccessMessage()">Close</button>
+    </div>
+  </div>
+  
